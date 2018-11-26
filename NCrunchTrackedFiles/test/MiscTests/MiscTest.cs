@@ -21,7 +21,6 @@
         {
             string rootNamespace = typeof(Client).Namespace;
             string resourcePath = $"{rootNamespace}." + relativePath;
-            //string resourcePath = $"{rootNamespace}." + relativePath;
             LogIt("Reading from '{0}'.", resourcePath);
             using (var reader =
                 new StreamReader(typeof(Client).Assembly.GetManifestResourceStream(resourcePath)))
@@ -33,7 +32,6 @@
 
         protected string ReadFileFromStdLibBinOutput(string relativePath)
         {
-            //var slnFilePath = NCrunch.Framework.NCrunchEnvironment.GetOriginalSolutionPath();
             string assemblyFilePath = typeof(Client).Assembly.Location;
             string assemblyDirPath = Path.GetDirectoryName(assemblyFilePath);
 
