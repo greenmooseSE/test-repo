@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Generated\JsonFile2AsEmbeddedResource.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Generated\JsonFile2AsEmbeddedResource.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Generated\JsonFile1CopiedToOutput.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
