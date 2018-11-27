@@ -22,7 +22,7 @@ namespace StdLibWithTrackedFiles {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace StdLibWithTrackedFiles {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("StdLibWithTrackedFiles.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace StdLibWithTrackedFiles {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,12 +61,13 @@ namespace StdLibWithTrackedFiles {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized string similar to {
+        ///  &quot;name&quot;:  &quot;JsonFile4ReferencedByResourcesResx&quot; 
+        ///}.
         /// </summary>
-        internal static byte[] JsonFile3ReferencedByResourcesResx {
+        public static string JsonFile3ReferencedByResourcesResx {
             get {
-                object obj = ResourceManager.GetObject("JsonFile3ReferencedByResourcesResx", resourceCulture);
-                return ((byte[])(obj));
+                return ResourceManager.GetString("JsonFile3ReferencedByResourcesResx", resourceCulture);
             }
         }
     }

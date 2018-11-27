@@ -6,13 +6,9 @@
 
   <ItemGroup>
     <None Remove="Generated\JsonFile2AsEmbeddedResource.json" />
-    <None Remove="Generated\JsonFile3ReferencedByResourcesResx.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Generated\JsonFile3ReferencedByResourcesResx.json">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="Generated\JsonFile2AsEmbeddedResource.json">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -28,14 +24,18 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <None Update="Generated\JsonFile1CopiedToOutput.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Generated\JsonFile3ReferencedByResourcesResx.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
