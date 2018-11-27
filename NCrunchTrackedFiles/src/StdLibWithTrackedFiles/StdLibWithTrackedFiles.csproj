@@ -6,10 +6,31 @@
 
   <ItemGroup>
     <None Remove="Generated\JsonFile2AsEmbeddedResource.json" />
+    <None Remove="Generated\JsonFile3ReferencedByResourcesResx.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Generated\JsonFile2AsEmbeddedResource.json" />
+    <EmbeddedResource Include="Generated\JsonFile3ReferencedByResourcesResx.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generated\JsonFile2AsEmbeddedResource.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
