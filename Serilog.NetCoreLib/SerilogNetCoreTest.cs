@@ -28,19 +28,13 @@
         [ExcludeFromCodeCoverage]
         static SerilogNetCoreTest()
         {
-            //Weird way of initializing a configuration for Serilog, setting a static logger?
-            Log.Logger = new LoggerConfiguration().WriteTo.Trace()
-                //Required in order to log something
-                .MinimumLevel.Debug().Enrich.FromLogContext().CreateLogger();
-
-            //Logger logger = logCfg.CreateLogger();
-            Log.Logger.Debug("Logging initialized.");
+            var seriLogContainer = new SeriLogContainer();
 
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddLogging(builder =>
             {
                 builder.SetMinimumLevel(LogLevel.Trace);
-                builder.AddSerilog(dispose: true);
+                seriLogContainer.AddLogging(builder);
             });
             _serviceProvider = serviceCollection.BuildServiceProvider();
         }
