@@ -19,18 +19,21 @@
 
         private static readonly ServiceProvider _serviceProvider;
 
+        protected static TLogContainer pLogContainer { get; }
+    
+
         public ILogger pLog { get; private set; }
 
         ///<summary>One-time only construction logic.</summary>
         [ExcludeFromCodeCoverage]
         static CommonLogTest()
         {
-            var container = new TLogContainer();
+            pLogContainer = new TLogContainer();
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddLogging(builder =>
             {
                 builder.SetMinimumLevel(LogLevel.Trace);
-                container.AddLogging(builder);
+                pLogContainer.AddLogging(builder);
             });
 
             _serviceProvider = serviceCollection.BuildServiceProvider();
