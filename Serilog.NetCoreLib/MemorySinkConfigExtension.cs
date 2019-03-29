@@ -10,7 +10,7 @@
         public static LoggerConfiguration MyMemorySink(this LoggerSinkConfiguration loggerConfiguration,
             IFormatProvider formatProvider = null)
         {
-            return loggerConfiguration.Sink(new MemorySink(formatProvider));
+            return loggerConfiguration.Sink(new MyMemorySink(formatProvider));
         }
     }
 }

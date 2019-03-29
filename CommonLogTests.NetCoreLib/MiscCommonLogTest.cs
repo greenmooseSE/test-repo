@@ -34,8 +34,8 @@
             pLog.LogDebug(what);
             pLog.LogDebug("2");
 
-            pLogContainer.LoggedEntries.Select(x => x.RenderedMessage).Should().Contain(msg => msg != null)
-                .Which.Should().Contain(what);
+            pLogContainer.LoggedEntries.Select(x => x.RenderedMessage).Should()
+                .Contain(msg => msg.Contains(what));
         }
 
         [Test]
