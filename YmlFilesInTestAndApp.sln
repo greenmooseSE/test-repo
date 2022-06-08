@@ -1,14 +1,47 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{07FFFEB7-0815-4CFB-BC1E-789C8F364482}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YmlFilesInTestAndApp.WebApi", "Src\YmlFilesInTestAndApp.WebApi\YmlFilesInTestAndApp.WebApi.csproj", "{907E2426-029D-44B9-9972-E3D47FCB9601}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{5400DBE3-EDF7-4E78-9567-8D8AE35AD0C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YmlFilesInTestAndApp.WebApi.Tests", "Test\YmlFilesInTestAndApp.WebApi.Tests\YmlFilesInTestAndApp.WebApi.Tests.csproj", "{E4E566BF-B5F7-43F0-8815-19846DE53A48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9AEDC95-8B6F-48A5-B945-F2CA75CC3BFD}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Directory.build.props = Directory.build.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{907E2426-029D-44B9-9972-E3D47FCB9601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{907E2426-029D-44B9-9972-E3D47FCB9601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{907E2426-029D-44B9-9972-E3D47FCB9601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{907E2426-029D-44B9-9972-E3D47FCB9601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4E566BF-B5F7-43F0-8815-19846DE53A48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4E566BF-B5F7-43F0-8815-19846DE53A48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4E566BF-B5F7-43F0-8815-19846DE53A48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4E566BF-B5F7-43F0-8815-19846DE53A48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{907E2426-029D-44B9-9972-E3D47FCB9601} = {07FFFEB7-0815-4CFB-BC1E-789C8F364482}
+		{E4E566BF-B5F7-43F0-8815-19846DE53A48} = {5400DBE3-EDF7-4E78-9567-8D8AE35AD0C0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CB66787-B052-4649-A581-9E455AD6FF2F}
 	EndGlobalSection
 EndGlobal
